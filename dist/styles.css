@@ -48,3 +48,5 @@ footer .footer-logo{display:block;width:min(560px,100%);height:auto;margin:0 aut
 
 /* Difuminado vertical aprobado para la portada */
 .hero-photo::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:30%;background:linear-gradient(to right,#071827 0%,rgba(7,24,39,.85) 15%,rgba(7,24,39,.45) 45%,rgba(7,24,39,0) 100%);z-index:1;pointer-events:none}@media(max-width:760px){.hero-photo::before{display:none}}
+
+.scroll-top{position:fixed;right:28px;bottom:28px;z-index:90;width:50px;height:50px;display:grid;place-items:center;background:var(--navy);color:var(--gold);border:1px solid var(--gold);border-radius:50%;box-shadow:0 4px 18px #07182726;cursor:pointer;transition:background .2s,color .2s,transform .2s}.scroll-top[hidden]{display:none}.scroll-top:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}@media(max-width:760px){.scroll-top{right:18px;bottom:18px;width:46px;height:46px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-top{transition:none}}

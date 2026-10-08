@@ -98,3 +98,16 @@ if (brandIntro) {
     document.addEventListener('keydown', finishIntro, { once: true });
   }
 }
+
+const scrollTopButton = document.createElement('button');
+scrollTopButton.type = 'button';
+scrollTopButton.className = 'scroll-top';
+scrollTopButton.setAttribute('aria-label', 'Volver arriba');
+scrollTopButton.title = 'Volver arriba';
+scrollTopButton.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v13"/></svg>';
+scrollTopButton.hidden = true;
+document.body.append(scrollTopButton);
+const updateScrollTop = () => { scrollTopButton.hidden = window.scrollY < 350; };
+window.addEventListener('scroll', updateScrollTop, { passive: true });
+updateScrollTop();
+scrollTopButton.addEventListener('click', () => { window.scrollTo({top:0,behavior:reducedMotion.matches?'instant':'smooth'}); });
