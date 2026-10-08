@@ -45,3 +45,6 @@ footer .footer-logo{display:block;width:min(560px,100%);height:auto;margin:0 aut
 .brand-tagline{display:block;font-family:Arial,sans-serif;font-size:.55rem;letter-spacing:.16em;line-height:1.4;margin-top:8px;color:var(--ivory)}
 
 .header .brand{gap:12px}.header .brand-wordmark{font-family:Cormorant,Georgia,serif;font-size:1.35rem;letter-spacing:.1em;white-space:nowrap;text-align:center}.header .brand-tagline{font-family:Cormorant,Georgia,serif;font-size:.78rem;letter-spacing:.2em;margin-top:10px}@media(max-width:760px){.header .brand{gap:6px}.header .brand img{width:75px;height:80px}.header .brand-wordmark{font-size:.95rem;letter-spacing:.06em}.header .brand-tagline{font-size:.65rem;letter-spacing:.12em;margin-top:8px}}@media(max-width:390px){.header .brand img{width:58px;height:70px}.header .brand-wordmark{font-size:.83rem}.header .brand-tagline{font-size:.56rem}.header .menu-toggle{font-size:.75rem;padding:6px}}
+
+/* Difuminado vertical aprobado para la portada */
+.hero-photo::before{content:"";position:absolute;top:0;bottom:0;left:-1px;width:30%;background:linear-gradient(to right,#071827 0%,rgba(7,24,39,.85) 15%,rgba(7,24,39,.45) 45%,rgba(7,24,39,0) 100%);z-index:1;pointer-events:none}@media(max-width:760px){.hero-photo::before{display:none}}
